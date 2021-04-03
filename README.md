@@ -1,6 +1,8 @@
 # Food-order
 java/com.example.datmonanquatinnhan
 
+  *List món ăn được nhập trong "Menu"
+
   ."customListAdapter": chuyển list<FoodEntity> => listView
   
   ."Menu": xử lí cho "activity_main.xml"
