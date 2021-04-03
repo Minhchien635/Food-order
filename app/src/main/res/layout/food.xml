@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:background="@drawable/border"
+                android:id="@+id/info" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/img"
+                android:layout_below="@id/info" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="Chọn kích thước bánh"
+                android:id="@+id/choncobanh"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="3dp" />
+
+            <RadioGroup
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/groupcobanh"
+                android:layout_below="@+id/choncobanh">
+
+                <RadioButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Trung bình"
+                    android:id="@+id/co7inch"
+                    android:checked="true"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Lớn"
+                    android:id="@+id/co9inch"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Nhỏ"
+                    android:id="@+id/co12inch"
+                    android:layout_weight="1" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="Tùy chọn thêm"
+                android:id="@+id/chonthem"
+                android:layout_below="@+id/groupcobanh" />
+
+            <EditText
+                android:id="@+id/yeucauthem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Nhập tùy chọn"
+                android:layout_below="@+id/chonthem"
+                />
+
+            <Button
+                android:id="@+id/buttonorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberpicker"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:text="Đặt hàng"
+                android:textColor="@color/white"
+                app:backgroundTint="#bb0000" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="Số lượng"
+                android:id="@+id/soluong"
+                android:layout_below="@+id/yeucauthem" />
+
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/numberpicker"
+                android:layout_below="@+id/soluong">
+
+                <Button
+                    android:id="@+id/btn_less"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:background="#bb0000"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#bb0000" />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0sp"
+                    android:text="0"
+                    android:id="@+id/et_number"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#bb0000" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>
