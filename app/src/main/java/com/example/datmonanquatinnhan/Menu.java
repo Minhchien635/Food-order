@@ -1,6 +1,7 @@
 package com.example.datmonanquatinnhan;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -24,7 +25,8 @@ import java.util.List;
 public class Menu extends AppCompatActivity implements OnMapReadyCallback {
     ListView listView;
     GoogleMap map;
-    //ImageView img;
+    View googleMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +37,15 @@ public class Menu extends AppCompatActivity implements OnMapReadyCallback {
 
         List<FoodEntity> foods = new ArrayList<FoodEntity>();
 
-        foods.add(new FoodEntity("food1","Bánh mì"));
-        foods.add(new FoodEntity("food2","Bánh rán"));
-        foods.add(new FoodEntity("food1","Bánh mì"));
-        foods.add(new FoodEntity("food2","Bánh rán"));
+        foods.add(new FoodEntity("banhmikebab","Bánh mì kebab"));
+        foods.add(new FoodEntity("banhran","Bánh rán"));
+        foods.add(new FoodEntity("banhcanhgioheo","Bánh canh giò heo"));
+        foods.add(new FoodEntity("bunbohue","Bún bò huế"));
+        foods.add(new FoodEntity("comsuonnuong","Cơm sườn nướng"));
+        foods.add(new FoodEntity("comgadagion","Cơm gà da giòn"));
+        foods.add(new FoodEntity("goicuon","Gỏi cuốn"));
+        foods.add(new FoodEntity("hutieunamvang","Hủ tiếu nam vang"));
+        foods.add(new FoodEntity("phobo","Phở bò"));
 
         listView = findViewById(R.id.listView);
         listView.setAdapter( new customListAdapter(this,foods));
